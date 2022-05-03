@@ -5,12 +5,16 @@ using UnityEngine;
 public class Playonclick : MonoBehaviour
 
 {
+    public bool lockCursor = true;
 
     public AudioSource someSound;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (lockCursor)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     // Update is called once per frame
@@ -22,6 +26,7 @@ public class Playonclick : MonoBehaviour
             someSound.Play();
         }
         
+
 
     }
 }

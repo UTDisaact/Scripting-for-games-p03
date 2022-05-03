@@ -10,4 +10,10 @@ public class rotation : MonoBehaviour
         x += Time.deltaTime * 10;
         transform.rotation = Quaternion.Euler(x, 0, 0);
     }
+
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
 }

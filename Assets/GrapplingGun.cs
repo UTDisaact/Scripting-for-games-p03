@@ -11,6 +11,11 @@ public class GrapplingGun : MonoBehaviour
     private float maxDistance = 100f;
     private SpringJoint joint;
 
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     void Awake()
     {
         lr = GetComponent<LineRenderer>();

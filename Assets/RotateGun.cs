@@ -9,6 +9,12 @@ public class RotateGun : MonoBehaviour
     private Quaternion desiredRotation;
     private float rotationSpeed = 5f;
 
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+
     void Update()
     {
         if (!grappling.IsGrappling())
